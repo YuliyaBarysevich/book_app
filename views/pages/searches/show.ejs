@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/reset.css" rel = "stylesheet">
+    <link href = "/styles/base.css" rel = "stylesheet">
+    <link href = "/styles/layout.css" rel = "stylesheet">
+    <link href="/styles/modules.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1 id = "results">Results</h1>
+      <img id = "logo" src = "https://www.freeiconspng.com/uploads/book-icon--icon-search-engine-6.png">
+    </header>
+    <main>
+      <section id="container">
+        <% output.forEach( book => { %>
+          <div class="book-info">
+            <img src= <%= book.image %> >
+            <h3> <%= book.title; %> </h3>
+            <h4> <%= book.author; %> </h4>
+            <p><%= book.description; %> </p>
+          </div>
+        <% }); %>
+      </section>
+    </main>
+  </body>
+</html>

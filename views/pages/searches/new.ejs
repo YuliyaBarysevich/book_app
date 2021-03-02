@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/styles/reset.css" rel = "stylesheet">
+  <link href = "/styles/base.css" rel = "stylesheet">
+  <link href = "/styles/layout.css" rel = "stylesheet">
+  <link href="/styles/modules.css" rel="stylesheet">
+  <title>MyBook App</title>
+</head>
+<body>
+  <header>
+  <h1>MyBook App</h1>
+  <img id = "logo" src = "https://www.freeiconspng.com/uploads/book-icon--icon-search-engine-6.png">
+  </header>
+  <main>
+    <h2>Search by Title or Author</h2>
+  <form action="/searches" method= "POST">
+    <section>
+      <div>
+        <input type="text" name="search" placeholder="Enter a title or author" required>
+      </div>
+      <div>
+        <label>
+          <input type="radio" value="author" name="search">
+          <span>by Author</span>
+        </label>
+        <label>
+          <input type="radio" value="title" name= "search">
+          <span>by Title</span>
+        </label>
+      </div>
+      <div>
+        <input type = "submit">
+      </div>
+    </section>
+  </form>
+  </main>
+  <footer>
+    <p>By Yuliya Barysevich | Code Fellows</p>
+  </footer>
+ 
+  
+</body>
+</html>
