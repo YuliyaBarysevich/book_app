@@ -21,13 +21,13 @@ app.get('/searches/new', renderSearch);
 app.post('/searches/show', getBooksCallback)
 
 function getBooksCallback(req, res){
-  let userChoice = req.body.search[1]
+  let userChoice = req.body.search
   let url = 'https://www.googleapis.com/books/v1/volumes?q='
   if (userChoice === 'author'){
-    url += `+inauthor:${req.body.search[0]}`
+    url += `inauthor:${req.body.query}`
   }
   if (userChoice === 'title'){
-    url += `+intitle:${req.body.search[0]}`
+    url += `intitle:${req.body.query}`
   }
   superagent.get(url)
     .then(bookInfo => {
@@ -53,7 +53,7 @@ app.get('/', (req, res) => {
 function Book(object){
   this.image = object.volumeInfo.imageLinks ? object.volumeInfo.imageLinks.thumbnail : 'https://i.imgur.com/J5LVHEL.jpg'
   this.title = object.volumeInfo.title;
-  this.author = object.volumeInfo.authors[0]
+  this.author = object.volumeInfo.authors;
   this.description = object.volumeInfo.description
 }
 
