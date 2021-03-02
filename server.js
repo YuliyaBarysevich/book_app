@@ -17,8 +17,8 @@ app.use(express.urlencoded({extended:true}));
 
 
 // ============== Routes ================================
-app.get('/search', renderSearch);
-app.post('/searches', getBooksCallback)
+app.get('/searches/new', renderSearch);
+app.post('/searches/show', getBooksCallback)
 
 function getBooksCallback(req, res){
   let userChoice = req.body.search[1]
