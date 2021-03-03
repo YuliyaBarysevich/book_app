@@ -17,8 +17,8 @@
   </header>
   <main>
     <h2>My Library</h2>
-    <h3>Total books in my Library: <%= allBooks.length %></h3>
-    <a href="/searches/new"><h4>Let's find your next favorite book</h4></a>
+    <a href="/searches/new"><h3 id='next-book'>Let's find your next favorite book...</h3></a>
+    <h4>Total books in my Library: <%= allBooks.length %></h4>
     <section id="container">
       <% allBooks.forEach(book => { %>
         <div class="book-info">
@@ -32,7 +32,8 @@
       <% }); %>
     </section>
   </main>
- 
-  
+  <footer>
+    <p>By Yuliya Barysevich | Code Fellows</p>
+  </footer>
 </body>
 </html>

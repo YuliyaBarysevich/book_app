@@ -4,5 +4,6 @@
 }
 
 body {
-  width: 480px;
+  max-width: 480px;
+  max-height: 100vh;
 }

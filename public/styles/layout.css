@@ -1,5 +1,5 @@
 main{
-  height: 100vh;
+  min-height: 600px;
 }
 
 header {
@@ -79,37 +79,44 @@ footer{
 
 
 .book-info{
-  height: 420px;
+  height: 490px;
   width: 450px;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   margin-bottom: 30px;
 }
 
 .book-info img{
-  width: 100px;
-  height: 150px;
+  min-width: 100px;
+  max-width: 170px;
   margin-bottom: 20px;
 }
 
 h3, h4{
   margin-bottom: 15px;
 }
-h4{
-  margin-bottom: 40px;
-}
-
 
 
 .book-info p{
   overflow: scroll;
-  height: 200px;
+  width: 400px;
+  min-height: 10px;
+  max-height: 160px;
 }
 
 #details{
  padding: 20px 40px;
 }
 
+#save-book{
+  padding: 17px 45px;
+  display: inline-block;
+}
+
+#next-book{
+  padding: 15px;
+}
 
 
 

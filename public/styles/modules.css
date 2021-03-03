@@ -50,6 +50,7 @@ h3 {
 
 h4 {
   font-family: cursive;
+  text-align: center;
 }
 
 .book-info p{
@@ -71,9 +72,32 @@ border-radius: 13px;
 
 #details:hover{
   background-color: #313131;
+  font-size: 18px;
+}
+
+
+
+#save-book{
+  background-color: #5e4840;
+  border: 1px solid #5e4840;
+  border-radius: 12px;
+  color: #D9CFCC;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
+
+a:hover{
+  color: rgb(139, 8, 8);
+}
+
+#next-book{
+  border-bottom: 2px solid rgba(49, 49, 49, 0.44);
+  border-top: 2px solid rgba(49, 49, 49, 0.44);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 
