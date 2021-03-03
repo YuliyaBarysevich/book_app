@@ -22,10 +22,10 @@ const client = new pg.Client(DATABASE_URL);
 client.on('error', error => console.log(error))
 // ============== Routes ================================
 app.get('/searches/new', renderSearch);
-app.post('/searches/show', getBooksCallback)
+app.post('/searches', getBooksCallback)
 app.get('/', displayHomePage) 
 app.get('/books/:id', displayOneBook)
-app.post('/add', addtoLibrary)
+app.post('/books', addtoLibrary)
 
 
 function displayHomePage (req, res){
