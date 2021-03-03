@@ -16,18 +16,16 @@
     <img id = "logo" src = "https://www.freeiconspng.com/uploads/book-icon--icon-search-engine-6.png">
   </header>
   <main>
-    <h2>Your Bookshell</h2>
+    <h2>Book Information</h2>
+    <a href="/"><h3>Go Back to your Bookshelf</h3></a>
     <section id="container">
-      <% allBooks.forEach(book => { %>
         <div class="book-info">
-          <img src= <%= book.image_url %>>
-          <h3> <%= book.title; %> </h3>
-          <h4> <%= book.author; %> </h4>
-          <!-- <p><%= book.description; %> </p>
-          <span><%= book.isbn; %></span> -->
-          <a href="/books/<%= book.id %>">View Details</a>
+          <img src= <%= chosenBook.image_url %> >
+          <h3> <%= chosenBook.title; %> </h3>
+          <h4> <%= chosenBook.author; %> </h4>
+          <p><%= chosenBook.description; %> </p>
+          <span><%= chosenBook.isbn; %></span>
         </div>
-      <% }); %>
     </section>
   </main>
  

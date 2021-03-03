@@ -24,6 +24,7 @@ client.on('error', error => console.log(error))
 app.get('/searches/new', renderSearch);
 app.post('/searches/show', getBooksCallback)
 app.get('/', displayHomePage) 
+app.get('/books/:id', displayOneBook)
 
 
 function displayHomePage (req, res){
@@ -31,9 +32,22 @@ function displayHomePage (req, res){
   client.query(sqlString)
     .then(result => {
       const ejsObject = {allBooks: result.rows}
-      console.log(ejsObject)
+      // console.log(ejsObject)
       res.render('pages/index.ejs', ejsObject)
     })
+}
+
+function displayOneBook(req, res){
+  const id = req.params.id;
+  const sqlString = 'SELECT * FROM books WHERE id=$1'
+  const sqlArray = [id]
+  client.query(sqlString, sqlArray)
+    .then(result => {
+      const chosenBook = result.rows[0];
+      const ejsObject = {chosenBook};
+      res.render('pages/books/detail.ejs', ejsObject)
+    })
+
 }
 
 
