@@ -11,9 +11,17 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Hello world!</h1>
-  <h2>Yuliya</h2>
- 
+  <section id="container">
+    <% allBooks.forEach(book => { %>
+      <div class="book-info">
+        <img src= <%= book.image_url %> >
+        <h3> <%= book.title; %> </h3>
+        <h4> <%= book.author; %> </h4>
+        <p><%= book.description; %> </p>
+        <span><%= book.isbn; %></span>
+      </div>
+    <% }); %>
+  </section>
   
 </body>
 </html>
