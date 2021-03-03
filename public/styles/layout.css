@@ -95,12 +95,19 @@ footer{
 h3, h4{
   margin-bottom: 15px;
 }
+h4{
+  margin-bottom: 40px;
+}
 
 
 
 .book-info p{
   overflow: scroll;
   height: 200px;
+}
+
+#details{
+ padding: 20px 40px;
 }
 
 

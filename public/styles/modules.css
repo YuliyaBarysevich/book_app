@@ -60,3 +60,20 @@ h4 {
 border: 5px double rgba(104,89,69,0.67);
 border-radius: 13px;
 }
+
+#details{
+ background-color: #5e4840;
+ border: 1px solid #5e4840;
+ border-radius: 12px;
+ color: #D9CFCC;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#details:hover{
+  background-color: #313131;
+}
+
+a {
+  text-decoration: none;
+}
+

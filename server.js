@@ -25,6 +25,7 @@ app.get('/searches/new', renderSearch);
 app.post('/searches/show', getBooksCallback)
 app.get('/', displayHomePage) 
 app.get('/books/:id', displayOneBook)
+app.post('/add', addtoLibrary)
 
 
 function displayHomePage (req, res){
@@ -75,6 +76,16 @@ function getBooksCallback(req, res){
 
 function renderSearch(req, res) {
   res.render('pages/searches/new.ejs')
+}
+
+function addtoLibrary(req, res){
+  const sqlString = 'INSERT INTO books (title, author, isbn, image_url, description) VALUES ($1, $2, $3, $4, $5) RETURNING id;'
+  const sqlArray = [req.body.title, req.body.author, req.body.isbn, req.body.image_url, req.body.description]
+  client.query(sqlString, sqlArray)
+    .then(result => {
+      const newBookId = result.rows[0].id;
+      res.redirect(`/books/${newBookId}`)
+    })
 }
 
 

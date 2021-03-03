@@ -16,8 +16,9 @@
     <img id = "logo" src = "https://www.freeiconspng.com/uploads/book-icon--icon-search-engine-6.png">
   </header>
   <main>
-    <h2>My Bookshell</h2>
-    <a href="/searches/new"><h3>Let's find your next favorite book</h3></a>
+    <h2>My Library</h2>
+    <h3>Total books in my Library: <%= allBooks.length %></h3>
+    <a href="/searches/new"><h4>Let's find your next favorite book</h4></a>
     <section id="container">
       <% allBooks.forEach(book => { %>
         <div class="book-info">
@@ -26,7 +27,7 @@
           <h4> <%= book.author; %> </h4>
           <!-- <p><%= book.description; %> </p>
           <span><%= book.isbn; %></span> -->
-          <a href="/books/<%= book.id %>">View Details</a>
+          <a href="/books/<%= book.id %>"><span id ="details">View Details</span></a>
         </div>
       <% }); %>
     </section>

@@ -21,6 +21,15 @@
             <h3> <%= book.title; %> </h3>
             <h4> <%= book.author; %> </h4>
             <p><%= book.description; %> </p>
+
+            <form action='/add' method="POST">
+              <input type='hidden' name='title' value = '<%= book.title%>'>
+              <input type='hidden' name='author' value = '<%= book.author%>'>
+              <input type='hidden' name='isbn' value = '<%= book.isbn%>'>
+              <input type='hidden' name='image_url' value = '<%= book.image_url%>'>
+              <input type='hidden' name='description' value = '<%= book.description%>'>
+              <button type="submit" value='save'>Add to my Library</button>
+            </form>
           </div>
         <% }); %>
       </section>
