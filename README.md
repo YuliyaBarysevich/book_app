@@ -17,6 +17,8 @@ Basic full-stack application for a book list which will include the ability to s
 7. As a user, I want to request information about a single book so that I can view its additional details and share it by URL.
 8.  As a user, I want the ability to add new books to my application so that I can save search results.
 9. As a user, I want a simple, clean-looking UI so that my application is easy to navigate.
+10. As a user, I want to update the details of a book so that it displays the way I want it to, according to my personalized preferences.
+11. As a user, I want to remove books from my collection so that it accurately represents my favorite books.
 
 ## Routes
 1. `/`
@@ -42,6 +44,9 @@ Basic full-stack application for a book list which will include the ability to s
 3. Platform:
     - Node.js
 
+4. Data Base
+    - SQL
+
 ## Time Estimate
 
 **Number and name of feature: Lab 11**
@@ -64,3 +69,13 @@ Finish time: 11.20PM
 
 Actual time needed to complete: 6hrs 30min
 ________________________________________________
+________________________________________________
+**Number and name of feature: Lab 13**
+
+Estimate of time needed to complete: 5hrs
+
+Start time: 5.10PM
+
+Finish time: 9.20PM
+
+Actual time needed to complete: 4hrs 10min
