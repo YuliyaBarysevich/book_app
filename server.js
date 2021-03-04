@@ -31,6 +31,7 @@ app.get('/books/:id', displayOneBook)
 app.post('/books', addtoLibrary)
 app.get('/books/:id/edit', renderEditForm)
 app.put('/books/:id', editBook)
+app.delete('/books/:id', deleteBook)
 
 function displayHomePage (req, res){
   const sqlString = 'SELECT * FROM books;';
@@ -113,6 +114,13 @@ function editBook(req, res){
     .then(() =>{
       res.redirect(`/books/${req.params.id}`)
     })
+}
+
+function deleteBook(req, res){
+  const sqlString = 'DELETE FROM books WHERE id=$1'
+  const sqlArray = [req.params.id]
+  client.query(sqlString, sqlArray)
+    .then(res.redirect('/'))
 }
 
 
