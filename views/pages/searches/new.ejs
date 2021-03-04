@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/styles/reset.css" rel = "stylesheet">
-  <link href = "/styles/base.css" rel = "stylesheet">
-  <link href = "/styles/layout.css" rel = "stylesheet">
-  <link href="/styles/modules.css" rel="stylesheet">
-  <title>MyBook App</title>
+  <%- include('./../../layout/head') %>
 </head>
 <body>
-  <header>
-  <h1>MyBook App</h1>
-  <img id = "logo" src = "https://www.freeiconspng.com/uploads/book-icon--icon-search-engine-6.png">
-  </header>
+  <%- include('./../../layout/header') %>
   <main>
     <h2>Search by Title or Author</h2>
   <form action="/searches" method= "POST">
@@ -33,14 +23,12 @@
         </label>
       </div>
       <div>
-        <input type = "submit">
+        <input id="submit-new" type = "submit">
       </div>
     </section>
   </form>
   </main>
-  <footer>
-    <p>By Yuliya Barysevich | Code Fellows</p>
-  </footer>
+  <%- include('./../../layout/footer') %>
  
   
 </body>

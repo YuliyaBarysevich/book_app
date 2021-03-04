@@ -25,14 +25,7 @@ input[type="radio"]{
   border-width: 0.2rem;
   border-color: gray;
 }
-input[type="submit"]{
-  border: 1px solid #A69992;
-}
 
-input[type="submit"]{
-  border-radius: 12px;
-  border: 1px solid #A69992;
-}
 
 footer{
   background-color: #5e4840;
@@ -77,7 +70,7 @@ border-radius: 13px;
 
 
 
-#save-book{
+#save-book, #update-button{
   background-color: #5e4840;
   border: 1px solid #5e4840;
   border-radius: 12px;
@@ -94,10 +87,66 @@ a:hover{
   color: rgb(139, 8, 8);
 }
 
-#next-book{
+#next-book, .back-to-home-page{
+  border-bottom: 2px solid rgba(49, 49, 49, 0.44);
+  border-top: 2px solid rgba(49, 49, 49, 0.44);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 15px 0;
+}
+
+
+#update-form{
+  text-align: center;
+}
+
+#update-fieldset{
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  color:#313131;
+}
+
+legend{
+  color: #5e4840;
+  font-size: 25px;
   border-bottom: 2px solid rgba(49, 49, 49, 0.44);
   border-top: 2px solid rgba(49, 49, 49, 0.44);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+label{
+  color: #313131;
+}
+.update-input {
+  background-color: #f3f0f0;
+  border: 3px solid  #5e4840;
+  font-size: 13px;
+}
+
+#input-textarea{
+  background-color: #f3f0f0;
+  border: 3px solid  #5e4840;
+  font-size: 13px;
+}
+
+#button-set button, #submit-new{
+  font-size: 17px;
+  border: 3px solid  #5e4840;
+  border-radius: 13px;
+  color: #313131;
+  background-color: #f3f0f0;
+  font-weight: bold;
+}
+
+#button-set button:hover{
+  background-color: #5e4840;
+  color: #f3f0f0;
+  border: 3px solid  #D9CFCC;
+}
+#submit-new:hover{
+  background-color: #5e4840;
+  color: #D9CFCC;
+  border: 3px solid  #f3f0f0;
+
+}
 

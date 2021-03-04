@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./../../layout/head') %>
+</head>
+<body>
+  <%- include('./../../layout/header') %>
+  <main>
+    <a href="/"><h3 class='back-to-home-page'>Cancel Updating</h3></a>
+    <form id='update-form' action='/books/<%= chosenBook.id %>?_method=PUT' method='POST'>
+        <legend>Update Information</legend>
+        <fieldset id='update-fieldset'>
+          <lable> 
+            Title
+            <input class = 'update-input' name='title' value = '<%= chosenBook.title; %>'>
+          </lable>
+          <label>
+            Author
+            <input class = 'update-input' name='author' value = '<%= chosenBook.author; %>'>
+          </label>
+          <label>
+            ISBN
+            <input class = 'update-input' name='isbn' value = '<%= chosenBook.isbn; %>'>
+          </label>
+          <label>
+            Image URL
+            <input class = 'update-input' name='image_url' value = '<%= chosenBook.image_url %>'>
+          </label>
+          <label>
+            Book Description
+            <input id = 'input-textarea' name='description' value = '<%= chosenBook.description; %>'>
+          </label>
+        </fieldset>
+         <button id ="update-button" type ="submit">Update Book</button>
+    </form>
+  </main>
+  <%- include('./../../layout/footer') %>
+</body>
+</html>
