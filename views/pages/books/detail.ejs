@@ -17,6 +17,10 @@
           <span><%= chosenBook.isbn; %></span>
         </div>
     </section>
+    <section id ="button-set">
+      <a href="/books/<%= chosenBook.id %>/edit"><button>Update Details</button></a>
+      <button>Delete</button>
+    </section>
   </main>
   <%- include('./../../layout/footer') %>
 </body>

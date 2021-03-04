@@ -4,6 +4,7 @@
 const express = require('express');
 const superagent = require('superagent');
 const pg = require('pg')
+const methodOverride = require('method-override')
 require('dotenv').config();
 
 
@@ -16,6 +17,8 @@ const DATABASE_URL = process.env.DATABASE_URL;
 app.set('view engine', 'ejs');
 app.use(express.static('./public'))
 app.use(express.urlencoded({extended:true}));
+app.use(methodOverride('_method'))
+
 
 
 const client = new pg.Client(DATABASE_URL);
@@ -26,7 +29,8 @@ app.post('/searches', getBooksCallback)
 app.get('/', displayHomePage) 
 app.get('/books/:id', displayOneBook)
 app.post('/books', addtoLibrary)
-
+app.get('/books/:id/edit', renderEditForm)
+app.put('/books/:id', editBook)
 
 function displayHomePage (req, res){
   const sqlString = 'SELECT * FROM books;';
@@ -85,6 +89,29 @@ function addtoLibrary(req, res){
     .then(result => {
       const newBookId = result.rows[0].id;
       res.redirect(`/books/${newBookId}`)
+    })
+}
+
+function renderEditForm(req, res){
+  // const ejsObject = req.body;
+  const id = req.params.id;
+  const sqlString = 'SELECT * FROM books WHERE id=$1'
+  const sqlArray = [id]
+  client.query(sqlString, sqlArray)
+    .then(result => {
+      const chosenBook = result.rows[0];
+      const ejsObject = {chosenBook};
+      res.render('pages/books/edit.ejs', ejsObject)
+    })
+}
+
+function editBook(req, res){
+  const sqlString = 'UPDATE books SET title=$1, author=$2, isbn=$3, image_url=$4, description=$5 WHERE id=$6'
+  const sqlArray = [req.body.title, req.body.author, req.body.isbn, req.body.image_url, req.body.description, req.params.id]
+  console.log(req.body)
+  client.query(sqlString, sqlArray)
+    .then(() =>{
+      res.redirect(`/books/${req.params.id}`)
     })
 }
 

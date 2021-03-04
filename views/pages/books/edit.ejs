@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./../../layout/head') %>
+</head>
+<body>
+  <%- include('./../../layout/header') %>
+  <main>
+    <form action='/books/<%= chosenBook.id %>?_method=PUT' method='POST'>
+        <legend>Update Information</legend>
+        <fieldset>
+          <lable> 
+            Title
+            <input name='title' value = '<%= chosenBook.title; %>'>
+          </lable>
+          <label>
+            Author
+            <input name='author' value = '<%= chosenBook.author; %>'>
+          </label>
+          <label>
+            ISBN
+            <input name='isbn' value = '<%= chosenBook.isbn; %>'>
+          </label>
+          <label>
+            Image URL
+            <input name='image_url' value = '<%= chosenBook.image_url %>'>
+          </label>
+          <label>
+            Book Description
+            <input name='description' value = '<%= chosenBook.description; %>'>
+          </label>
+        </fieldset>
+         <button type ="submit">Update Book</button>
+    </form>
+  </main>
+  <%- include('./../../layout/footer') %>
+</body>
+</html>
