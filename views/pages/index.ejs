@@ -12,16 +12,18 @@
     <section id="container">
       <% allBooks.forEach(book => { %>
         <div class="book-info">
-          <img src= <%= book.image_url %>>
-          <h3> <%= book.title; %> </h3>
-          <h4> <%= book.author; %> </h4>
-          <!-- <p><%= book.description; %> </p>
-          <span><%= book.isbn; %></span> -->
-          <a href="/books/<%= book.id %>"><span id ="details">View Details</span></a>
+          <div class="book-cover">
+            <img src= <%= book.image_url %>>
+          </div>
+          <div class="book-details">
+            <h3> <%= book.title; %> </h3>
+            <h4> <%= book.author; %> </h4>
+            <a href="/books/<%= book.id %>"><span id ="details">View Details</span></a>
+          </div>
         </div>
       <% }); %>
     </section>
   </main>
-  <<%- include('./../layout/footer') %>
+  <%- include('./../layout/footer') %>
 </body>
 </html>

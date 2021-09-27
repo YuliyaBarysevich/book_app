@@ -8,20 +8,28 @@
   <main>
     <h2>Book Information</h2>
     <a href="/"><h3 class='back-to-home-page'>Go Back to your Bookshelf</h3></a>
-    <section id="container">
-        <div class="book-info">
+    <section id="one-book-container">
+        <div class="one-book-info">
           <img src= <%= chosenBook.image_url %> >
           <h3> <%= chosenBook.title; %> </h3>
           <h4> <%= chosenBook.author; %> </h4>
           <p><%= chosenBook.description; %> </p>
-          <span><%= chosenBook.isbn; %></span>
+          <span>ISBN: <%= chosenBook.isbn; %></span>
+            <div id ="button-set">
+              <form action='/books/<%= chosenBook.id %>?_method=DELETE' method='POST'>
+                <button class="btn">
+                  <span>Delete</span>
+                </button>
+              </form>
+              <a href="/books/<%= chosenBook.id %>/edit">
+              <button class="btn">
+                <span>Update Details</span>
+              </button>
+              </a>
+            </div>
+            </section>
+          </section>
         </div>
-    </section>
-    <section id ="button-set">
-      <a href="/books/<%= chosenBook.id %>/edit"><button>Update Details</button></a>
-      <form action='/books/<%= chosenBook.id %>?_method=DELETE' method='POST'>
-        <button>Delete</button>
-      </form>
     </section>
   </main>
   <%- include('./../../layout/footer') %>

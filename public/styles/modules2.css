@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+/* Header */
+header {
+  background-color: #A69992;
+}
+
+header h1 {
+  font-size: 30px;
+  font-family: 'Concert One';
+  color: #eee4e1;
+}
+
+/* Main */
+
+.book-info{
+  background-color: #F3f0e8;
+  border: 2px solid #5e4840;
+  border-radius: 5px;
+}
+
+h2{
+  font-size: 22px;
+  background-color: #5e4840;
+  color: #D9CFCC;
+}
+
+#details {
+  background-color: #5e4840;
+  color: #F3f0e8;
+  border-radius: 3px;
+}
+
+#details:hover{
+  opacity: 0.7;
+}
+
+/* #button-set button, #submit-new{
+  font-size: 17px;
+  border: 3px solid  #5e4840;
+  border-radius: 13px;
+  color: #313131;
+  background-color: #f3f0f0;
+  font-weight: bold;
+}
+
+#button-set button:hover{
+  background-color: #5e4840;
+  color: #f3f0f0;
+  border: 3px solid  #D9CFCC;
+} */

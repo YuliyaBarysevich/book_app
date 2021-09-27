@@ -7,6 +7,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 100px;
+  width: 100%;
 }
 
 
@@ -66,9 +67,6 @@ input[type="text"], input[type="submit"]{
   height: 40px;
 }
 
-footer{
-  padding: 30px;
-}
 
 /* show.ejs */
 #container{
@@ -170,6 +168,16 @@ legend{
   display: block;
   width: 150px;
   height: 50px;
+}
+
+footer{
+  padding: 10px;
+}
+
+.personal-logo{
+  width: 25%;
+  display: block;
+  margin: 10px auto;
 }
 
 
