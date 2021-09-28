@@ -86,11 +86,11 @@ svg {
  
 .title h4{
   color: #D9CFCC;
-  font-size: 19px;
+  font-size: 17px;
 }
 
 .book-details h3{
-  font-size: 21px;
+  font-size: 19px;
 }
 
 .book-details h4 {
@@ -111,8 +111,9 @@ svg {
 /* Details page/ Single Book */
 
 .one-book-info {
-  border: 1px solid brown;
-  background-color: #F3f0e8;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 5px #5e4840;
+  background-color: #F6f4f1;
 }
 
 .one-book-info h3 {
@@ -206,3 +207,4 @@ footer{
 footer p {
   font-family: 'Quicksand','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
 }
+
