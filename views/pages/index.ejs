@@ -6,9 +6,24 @@
 <body>
   <%- include('./../layout/header') %>
   <main>
-    <h2>My Library</h2>
-    <a href="/searches/new"><h3 id='next-book'>Let's find your next favorite book...</h3></a>
-    <h4>Total books in my Library: <%= allBooks.length %></h4>
+    <div class="title">
+      <h2>My Library</h2>
+      <h4>Total books: <%= allBooks.length %></h4>
+    </div>
+    <div class="new-book-container">
+      <div class="new-book-center">
+        <a href="/searches/new">
+          <button class="new-book-btn">
+            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+            </svg>
+            <span>Find a new book...</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  
     <section id="container">
       <% allBooks.forEach(book => { %>
         <div class="book-info">

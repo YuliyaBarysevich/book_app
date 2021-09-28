@@ -68,7 +68,7 @@ input[type="text"], input[type="submit"]{
 }
 
 
-/* show.ejs */
+/* Search results page */
 #container{
   display: flex;
   flex-direction: column;

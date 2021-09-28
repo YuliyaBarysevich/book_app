@@ -7,22 +7,25 @@
     <%- include('./../../layout/header') %>
     <main>
       <a href="/"><h3 class='back-to-home-page'>Go Back to your Bookshelf</h3></a>
-      <section id="container">
+      <section id="search-result">
         <% output.forEach( book => { %>
-          <div class="book-info">
-            <img src= <%= book.image_url %> >
-            <h3> <%= book.title; %> </h3>
-            <h4> <%= book.author; %> </h4>
-            <p><%= book.description; %> </p>
-
-            <form action='/books' method="POST">
-              <input type='hidden' name='title' value = '<%= book.title%>'>
-              <input type='hidden' name='author' value = '<%= book.author%>'>
-              <input type='hidden' name='isbn' value = '<%= book.isbn%>'>
-              <input type='hidden' name='image_url' value = '<%= book.image_url%>'>
-              <input type='hidden' name='description' value = '<%= book.description%>'>
-              <button type="submit" id='save-book'>Add to my Library</button>
-            </form>
+          <div class="result-books">
+            <div>
+              <img src= <%= book.image_url %> >
+            </div>
+            <div>
+              <h3> <%= book.title; %> </h3>
+              <h4> <%= book.author; %> </h4>
+              <p><%= book.description; %> </p>
+              <form action='/books' method="POST">
+                <input type='hidden' name='title' value = '<%= book.title%>'>
+                <input type='hidden' name='author' value = '<%= book.author%>'>
+                <input type='hidden' name='isbn' value = '<%= book.isbn%>'>
+                <input type='hidden' name='image_url' value = '<%= book.image_url%>'>
+                <input type='hidden' name='description' value = '<%= book.description%>'>
+                <button type="submit" id='save-book'>Add to my Library</button>
+              </form>
+            </div>
           </div>
         <% }); %>
       </section>
