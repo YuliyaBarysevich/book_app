@@ -6,9 +6,9 @@
 <body>
   <%- include('./../../layout/header') %>
   <main>
-    <h2>Search by Title or Author</h2>
+    <h2 class="search-h2">Search by <span>Title</span> or <span>Author</span></h2>
   <form action="/searches" method= "POST">
-    <section>
+    <section class="search-form">
       <div>
         <input type="text" name="query" placeholder="Enter a title or author" required>
       </div>
@@ -22,8 +22,19 @@
           <span>by Title</span>
         </label>
       </div>
-      <div>
+      <!-- <div>
         <input id="submit-new" type = "submit">
+      </div> -->
+      <div class="new-book-container">
+        <div class="new-book-center">
+            <button type="submit" class="new-book-btn">
+              <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+              </svg>
+              <span>Search</span>
+            </button>
+        </div>
       </div>
     </section>
   </form>
